@@ -1,0 +1,77 @@
+.circuit-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(139, 44, 255, 0.05) 0%, transparent 70%);
+}
+
+.circuit-pattern {
+    opacity: 0.6;
+}
+
+/* Base trace animation properties */
+.trace.pulse {
+    stroke-dasharray: 20, 300;
+    stroke-dashoffset: 320;
+}
+
+/* Light pulse traveling effect */
+.pulse-1 {
+    animation: tracePulse 6s linear infinite;
+}
+
+.pulse-2 {
+    animation: tracePulse 8s linear infinite reverse;
+    animation-delay: 2s;
+    /* Add cyan glow to specific pulses */
+    filter: drop-shadow(0 0 4px var(--neon-cyan));
+}
+
+.pulse-3 {
+    animation: tracePulse 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes tracePulse {
+    0% {
+        stroke-dashoffset: 320;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -320;
+        opacity: 0;
+    }
+}
+
+.node-glow {
+    animation: nodePulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes nodePulse {
+    0% {
+        opacity: 0.4;
+        filter: drop-shadow(0 0 2px var(--neon-purple-neon));
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px var(--neon-purple-light));
+    }
+}

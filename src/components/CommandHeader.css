@@ -1,0 +1,101 @@
+.command-header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.title-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.main-title {
+    font-family: var(--font-header);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 4px;
+    color: #fff;
+    /* Metallic / Neon finish via gradient text */
+    background: linear-gradient(180deg, #ffffff 0%, var(--neon-purple-light) 50%, var(--neon-purple-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 10px rgba(180, 112, 255, 0.4),
+        0 4px 20px rgba(139, 44, 255, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+/* Glitch/glow layered text effect */
+.main-title::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 0 var(--neon-cyan);
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.main-title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -2px 0 var(--neon-purple-neon);
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+.tagline {
+    font-family: var(--font-header);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--text-main);
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    text-shadow: var(--glow-subtle);
+}
+
+.status-readout {
+    margin-top: 2.5rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--neon-cyan);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.1) inset;
+    letter-spacing: 1px;
+}
+
+.status-bracket {
+    color: var(--text-muted);
+}
+
+.status-text.warning {
+    color: #ff3366;
+    text-shadow: 0 0 8px rgba(255, 51, 102, 0.6);
+    margin: 0 0.5rem;
+}
+
+.status-cursor {
+    color: var(--neon-cyan);
+    font-weight: bold;
+}

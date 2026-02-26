@@ -1,0 +1,32 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 4rem;
+  /* Bottom padding for the page */
+}
+
+/* Layout spacers to manage vertical rhythm without margin collapsing issues */
+.spacer {
+  width: 100%;
+}
+
+.spacer.md {
+  height: 2rem;
+}
+
+.spacer.lg {
+  height: 4rem;
+}
+
+.spacer.xl {
+  height: 8rem;
+}

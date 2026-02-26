@@ -1,0 +1,170 @@
+.hidden-phase-section {
+    padding: 4rem 1rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.hidden-phase-container {
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.1) inset;
+}
+
+.encrypted-title {
+    font-family: var(--font-header);
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.progress-container {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--text-muted);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--neon-purple-dark), var(--neon-purple-light));
+    position: relative;
+    box-shadow: 0 0 10px var(--neon-purple-neon);
+}
+
+/* Glitch animation traveling across the progress bar */
+.progress-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(2px);
+    animation: glitchSweep 2.5s infinite;
+}
+
+@keyframes glitchSweep {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.progress-text .percent {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.teaser-text {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Sci-fi Button Styling */
+.cta-button {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 3rem;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.cta-border-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--neon-cyan);
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.cta-text {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-header);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover .cta-border-glow {
+    background: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), inset 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+.cta-button:hover .cta-text {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.portal-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(139, 44, 255, 0.2);
+    padding-top: 1.5rem;
+}
+
+.portal-footer p {
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.coordinators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.coord-contact {
+    color: var(--neon-cyan);
+    font-weight: normal;
+    margin-left: 0.25rem;
+}
+
+.coord-divider {
+    color: var(--neon-purple-dark);
+}

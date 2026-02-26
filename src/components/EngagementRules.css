@@ -1,0 +1,129 @@
+.engagement-rules-wrapper {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.secure-terminal-window {
+    background: rgba(10, 5, 20, 0.85);
+    border: 1px solid var(--neon-purple-dark);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(139, 44, 255, 0.2);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.terminal-header {
+    background: rgba(40, 20, 60, 0.6);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 44, 255, 0.3);
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+    margin-right: 1.5rem;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close {
+    background-color: #ff5f56;
+}
+
+.minimize {
+    background-color: #ffbd2e;
+}
+
+.maximize {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.terminal-body {
+    padding: 2rem;
+    font-family: var(--font-body);
+    color: #00ff00;
+    /* Classic terminal green for main text */
+}
+
+.sys-prompt {
+    margin-bottom: 1.5rem;
+    color: var(--neon-cyan);
+}
+
+.sys-prompt .cmd {
+    color: #fff;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.rules-list li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.bullet {
+    color: var(--neon-purple-light);
+    font-weight: bold;
+    margin-right: 0.5rem;
+    text-shadow: 0 0 8px var(--neon-purple-neon);
+}
+
+.bullet.fatal {
+    color: #ff3366;
+    text-shadow: 0 0 8px #ff3366;
+    animation: pulseWarning 1s infinite alternate;
+}
+
+@keyframes pulseWarning {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+        text-shadow: 0 0 15px #ff3366;
+    }
+}
+
+.blinking-cursor .cursor {
+    animation: blink 1s step-end infinite;
+    display: inline-block;
+    width: 10px;
+    height: 1em;
+    background-color: #00ff00;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

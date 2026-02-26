@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Core Colors */
+  --bg-dark: #07030A;
+  --bg-darker: #040106;
+  --bg-gradient: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
+
+  --neon-purple-light: #B470FF;
+  --neon-purple-neon: #8B2CFF;
+  --neon-purple-dark: #4A0E95;
+  --neon-cyan: #00F0FF;
+  /* For small accents/alerts */
+
+  /* Text Colors */
+  --text-main: #E2D1F9;
+  --text-muted: #8E73B8;
+
+  /* Typography */
+  --font-header: 'Orbitron', sans-serif;
+  --font-body: 'JetBrains Mono', monospace;
+
+  /* Effects */
+  --glow-subtle: 0 0 10px rgba(139, 44, 255, 0.3);
+  --glow-strong: 0 0 20px rgba(180, 112, 255, 0.6), 0 0 40px rgba(139, 44, 255, 0.4);
+  --glass-bg: rgba(20, 10, 35, 0.6);
+  --glass-border: 1px solid rgba(180, 112, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Glassmorphism Panel Base Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+}
