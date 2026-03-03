@@ -137,34 +137,96 @@
     text-shadow: 0 0 10px var(--neon-cyan);
 }
 
-.portal-footer {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    border-top: 1px solid rgba(139, 44, 255, 0.2);
-    padding-top: 1.5rem;
+.contact-station {
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1) inset;
+    text-align: center;
+    border-radius: 4px;
 }
 
-.portal-footer p {
-    margin: 0 0 0.5rem 0;
-    letter-spacing: 1px;
+.contact-header {
+    margin-bottom: 2rem;
 }
 
-.coordinators {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-main);
-    font-weight: bold;
-}
-
-.coord-contact {
+.contact-header h3 {
+    font-family: var(--font-header);
     color: var(--neon-cyan);
-    font-weight: normal;
-    margin-left: 0.25rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
 }
 
-.coord-divider {
-    color: var(--neon-purple-dark);
+.contact-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.coordinators-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 600px) {
+    .coordinators-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.coord-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(139, 44, 255, 0.3);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.coord-card:hover {
+    border-color: var(--neon-purple-light);
+    box-shadow: 0 0 20px rgba(139, 44, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.coord-icon {
+    color: var(--neon-purple-light);
+    filter: drop-shadow(0 0 8px var(--neon-purple-light));
+    margin-bottom: 0.5rem;
+}
+
+.coord-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coord-name {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.coord-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.coord-phone.sys-admin {
+    color: var(--neon-purple-light);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }

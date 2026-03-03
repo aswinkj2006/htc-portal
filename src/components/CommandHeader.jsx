@@ -25,8 +25,8 @@ const CommandHeader = () => {
 
             <div className="status-readout">
                 <span className="status-bracket">[</span>
-                <span className="status-text warning">
-                    STATUS: SYSTEM BREACH DETECTED // REBOOT REQUIRED
+                <span className="status-text online">
+                    STATUS: SYSTEM ONLINE
                 </span>
                 <span className="status-cursor" style={{ opacity: blinkVisible ? 1 : 0 }}>_</span>
                 <span className="status-bracket">]</span>

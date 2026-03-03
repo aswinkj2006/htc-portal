@@ -3,8 +3,8 @@ import './App.css';
 import CircuitBackground from './components/CircuitBackground';
 import CommandHeader from './components/CommandHeader';
 import TacticalIntel from './components/TacticalIntel';
-import OperationRoles from './components/OperationRoles';
 import EngagementRules from './components/EngagementRules';
+import MissionFlow from './components/MissionFlow';
 import HiddenPhase from './components/HiddenPhase';
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
         <TacticalIntel />
 
         <div className="spacer xl"></div>
-        <OperationRoles />
+        <EngagementRules />
 
         <div className="spacer xl"></div>
-        <EngagementRules />
+        <MissionFlow />
 
         <div className="spacer xl"></div>
         <HiddenPhase />

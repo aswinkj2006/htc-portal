@@ -20,10 +20,10 @@ const EngagementRules = () => {
 
                     <ul className="rules-list">
                         <li>
-                            <span className="bullet">[SYS_RULE_01]</span> Teams of 2-3 members.
+                            <span className="bullet">[SYS_RULE_01]</span> Individual participant event.
                         </li>
                         <li>
-                            <span className="bullet">[SYS_RULE_02]</span> Strict role adherence: Only the 'Terminal' may touch the keyboard.
+                            <span className="bullet">[SYS_RULE_02]</span> Event consists of 2 rounds. Round 1 involves location scouting and code patching. Top 5 participants proceed to Round 2.
                         </li>
                         <li>
                             <span className="bullet">[SYS_RULE_03]</span> No external AI assistance permitted.

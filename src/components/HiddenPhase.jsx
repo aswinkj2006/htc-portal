@@ -1,4 +1,5 @@
 import React from 'react';
+import { User, Phone } from 'lucide-react';
 import './HiddenPhase.css';
 
 const HiddenPhase = () => {
@@ -34,14 +35,29 @@ const HiddenPhase = () => {
                 </a>
             </div>
 
-            <footer className="portal-footer">
-                <p>SYSTEM COORDINATORS:</p>
-                <div className="coordinators">
-                    <span className="coord-name">ASWIN <span className="coord-contact">(9072239871)</span></span>
-                    <span className="coord-divider"> // </span>
-                    <span className="coord-name">MEGHA</span>
+            <div className="contact-station glass-panel">
+                <div className="contact-header">
+                    <h3>SECURE COMM-LINK</h3>
+                    <p>Contact System Coordinators for Manual Override</p>
                 </div>
-            </footer>
+
+                <div className="coordinators-grid">
+                    <div className="coord-card">
+                        <User className="coord-icon" size={32} />
+                        <div className="coord-details">
+                            <span className="coord-name">ASWIN</span>
+                            <span className="coord-phone"><Phone size={16} /> 9072239871</span>
+                        </div>
+                    </div>
+                    <div className="coord-card">
+                        <User className="coord-icon" size={32} />
+                        <div className="coord-details">
+                            <span className="coord-name">MEGHA</span>
+                            <span className="coord-phone sys-admin">[SYS_ADMIN]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };

@@ -95,6 +95,12 @@
     margin: 0 0.5rem;
 }
 
+.status-text.online {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+    margin: 0 0.5rem;
+}
+
 .status-cursor {
     color: var(--neon-cyan);
     font-weight: bold;

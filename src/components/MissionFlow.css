@@ -1,0 +1,153 @@
+.mission-flow-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    /* matches center of marker circle for small screens */
+    width: 2px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 240, 255, 0.4) 15%, rgba(180, 112, 255, 0.4) 85%, transparent 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .timeline-line {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 2;
+    padding-left: 60px;
+    /* space for the line on mobile */
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Even items push empty space left, content right. Odd vice versa. */
+    .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+        width: calc(50% - 40px);
+        /* 50% minus space for half the marker and padding */
+    }
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 5, 20, 0.8);
+    border: 2px solid var(--neon-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+    .timeline-marker {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.phase-num {
+    font-family: var(--font-header);
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+.timeline-content {
+    background: rgba(10, 15, 30, 0.6);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: rgba(180, 112, 255, 0.5);
+    box-shadow: 0 5px 25px rgba(180, 112, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.timeline-item:hover .timeline-marker {
+    border-color: var(--neon-purple-light);
+    box-shadow: 0 0 20px rgba(180, 112, 255, 0.5);
+}
+
+.timeline-item:hover .phase-num {
+    color: var(--neon-purple-light);
+    text-shadow: 0 0 5px rgba(180, 112, 255, 0.5);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.step-icon {
+    color: var(--neon-cyan);
+    display: flex;
+}
+
+.step-title {
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.step-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--neon-purple-light);
+    letter-spacing: 1px;
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
